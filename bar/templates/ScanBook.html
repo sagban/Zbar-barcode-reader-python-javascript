@@ -1,0 +1,49 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'includes/header.html' %}
+        <title>LIB - PORTAL</title>
+        <style type="text/css">
+
+      </style>
+    </head>
+    <body>
+        {% include 'includes/navbar.html' %}
+
+        <div class="container user-content">
+            <div class="user-content-display">
+            </div>
+        </div>
+
+        <div id="container">
+            <h1>Online Code Reader</h1>
+            <p>Just place any type of code in front of camera of mobile or laptop or tablet.</p>
+
+            <div class="">
+                <label for="audioSource"></label><select id="audioSource"></select>
+            </div>
+            <div class="video-field">
+                <div id="result_strip">
+                    <ul class="thumbnails"></ul>
+                </div>
+                <div class="select">
+                    <label for="videoSource"><i class='material-icons'>camera_rear</i></label><select id="videoSource"></select>
+                </div>
+                <video id="video" muted autoplay></video>
+                <button id="startbutton"><i class='material-icons'>camera</i></button>
+            </div>
+
+{#            <div id="interactive" class="viewport"><video autoplay="true" preload="auto" src="" muted="true" playsinline="true"></video>#}
+            <ul id="decoded"></ul>
+
+            <canvas id="canvas" class="drawingBuffer"></canvas><br clear="all"></div>
+             <p>*Requires Chrome 30 or later.</p>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+{#            <script src="{% static 'js/quagga.min.js' %}"></script>#}
+            <script src="{% static 'js/main.js' %}"></script>
+        </div>
+        {% include 'includes/script.html'%}
+    </body>
+</html>
