@@ -1,8 +1,6 @@
 from __future__ import print_function
 import pyzbar.pyzbar as pyzbar
 import numpy as np
-#import simple_barcode_detection
-import cv2
 from PIL import Image
 import re
 import io

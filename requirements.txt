@@ -1,0 +1,17 @@
+dependency-management==0.4.0
+Django==2.0.3
+django-sslserver==0.20
+gitdb2==2.0.3
+GitPython==2.1.9
+numpy==1.14.3
+packaging==17.1
+pbr==4.0.3
+Pillow==5.0.0
+pytz==2018.3
+PyYAML==3.12
+pyzbar==0.1.7
+requests==2.18.4
+urllib3==1.22
+vulture==0.10
+whitenoise==3.3.1
+

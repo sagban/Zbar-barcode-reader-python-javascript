@@ -31,6 +31,7 @@ Now open [127.0.0.1:8000](127.0.0.1:8000 "127.0.0.1:8000") locally on your brows
 *Note: Starting with Chrome 47, `getUserMedia()` requests are only allowed from secure origins: HTTPS or localhost.*
 
 **Solution: For development use `django-sslserver` for testing on different mobile devices and IP other than localhosts. Find this out [here](https://github.com/teddziuba/django-sslserver "here")*
+*For best results use mobile back camera*
 
 
 Sequence Diagram
@@ -39,5 +40,6 @@ Sequence Diagram
 ![Sequence](./brief.svg)
 
 
+*Feel free to add issue if you find problems related to this project.*
 End
 ----
