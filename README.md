@@ -1,7 +1,8 @@
 # Zbar-barcode-reader-python-javascript
 A bar code reader which detects and read barcode and Qr codes from the live streaming webcam, laptop cam and mobile phones (back and front both) camera.
 
-###Features
+Features
+-------
 
 - Reads and decodes any type of bar code and qr code from the live camera stream.
 - Compatible with all the modern devices.
@@ -12,7 +13,9 @@ A bar code reader which detects and read barcode and Qr codes from the live stre
 Note: Code can be use on different python frameworks.
 Important Files: `/bar/static/js/main.js` `/bar/views.py` `/bar/barcode.py`
 
-###Usage
+Usage
+-------
+
 **To run locally:**
 
 First fork this repository and then follow these steps:
@@ -30,8 +33,10 @@ Now open [127.0.0.1:8000](127.0.0.1:8000 "127.0.0.1:8000") locally on your brows
 **Solution: For development use `django-sslserver` for testing on different mobile devices and IP other than localhosts. Find this out [here](https://github.com/teddziuba/django-sslserver "here")*
 
 
-###Sequence Diagram
-                    
+Sequence Diagram
+------------- 
+
+![Sample generated UML diagram](https://bramp.github.io/js-sequence-diagrams/images/sample.svg)
 ```seq
 Javascript->Python(Django server): Make Ajax request
 Note right of Python(Django server):Decodes the image \nusing pyzbar
@@ -39,4 +44,5 @@ Javascript-->Python(Django server): Send snapshot of the \nlive camera stream
 Python(Django server)->>Javascript: Returns decoded barcode
 ```
 
-###End
+End
+----
