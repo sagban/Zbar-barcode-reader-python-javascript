@@ -37,7 +37,6 @@ Sequence Diagram
 ------------- 
 
 ![Sequence](./brief.svg)
-<img src="./brief.svg">
 
 
 End
