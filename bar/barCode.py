@@ -7,6 +7,7 @@ import io
 import base64, json
 
 
+
 def decode(url):
     # Find barcodes and QR codes
 
@@ -18,11 +19,19 @@ def decode(url):
     decodedObjects = pyzbar.decode(arr)
     print(decodedObjects)
 
+
+    # return decodedObjects.Decoded
     # Print results
+    data = []
+
     for obj in decodedObjects:
         print('Type : ', obj.type)
         print('Data : ', obj.data, '\n')
-        code = obj.data
-        return code.decode('utf-8')
-
-    return "NO BarCode Found"
+        data.append({
+            "code":obj.data.decode('utf-8') ,
+            "type": obj.type
+        })
+        # return "Code: "+code.decode('utf-8') + "\nType: "+ types
+    #data = serializers.serialize('json', data)
+    print(data)
+    return data

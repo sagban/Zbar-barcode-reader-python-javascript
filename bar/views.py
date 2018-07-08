@@ -3,6 +3,8 @@ from django.views.decorators.csrf import csrf_exempt
 from . import barCode
 from django.shortcuts import render
 from django.http import JsonResponse
+import json
+from django.core import serializers
 
 # Create your views here.
 
@@ -13,7 +15,11 @@ def decodeAjax(request):
     if request.POST:
         decodedData = barCode.decode(request.POST['imgBase64'])
         if decodedData:
-            return JsonResponse({"code" : decodedData})
+
+            json_data = json.dumps(decodedData)
+            print(json_data)
+            return JsonResponse(json_data,safe=False)
+
         return JsonResponse({"code" : 'NO BarCode Found'})
 
 
