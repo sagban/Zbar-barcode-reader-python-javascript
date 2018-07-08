@@ -78,15 +78,15 @@ div.select{
   margin:20px;
 }
 #result_strip{
-  background:#faebd700;
-  background:rgba(0,0,0,0);
-  width:200px;
-  height:20px;
+  background:rgba(238, 238, 238, 0.2);
+  width:70%;
+  height:auto;
   position:absolute;
   z-index:100;
   color:#ec008c;
-  margin:20px;
-  margin-top:80px;
+  font-weight:500;
+  margin-top:100px;
+  margin-left:12%;
 }
 @media(min-width:600px){
   div.select{
@@ -156,4 +156,19 @@ html, body{
 overflow-x: -moz-hidde-unscrollable;
     overflow-x: -moz-scrollbars-horizontal !important;
     overflow-x: hidden;
+}
+#container h1{
+  color:#ec008c;
+  text-decoration-line: underline;
+    text-decoration-style: double;
+    margin-top:30px;
+    font-size:30px;
+  text-transform:uppercase;
+}
+p{
+  margin:20px !important;
+  font-size:16px !important;
+}
+.sub{
+    font-size: 12px;
 }

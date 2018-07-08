@@ -109,7 +109,7 @@ function handleError(error) {
     canvas.height = height;
     canvas.getContext('2d').drawImage(video, 0, 0, width, height);
     var dataUrl = canvas.toDataURL('image/jpg');
-    console.log(dataUrl);
+    // console.log(dataUrl);
     $.ajax({
     type: "POST",
     url: "/decode/",
@@ -121,6 +121,7 @@ function handleError(error) {
         if(data.code =='NO BarCode Found'){
 
 
+            console.log("Trying..")
             var interval = setTimeout(function(){
 
                 var date2 = new Date();
@@ -140,10 +141,15 @@ function handleError(error) {
 
         }
         else{
-            console.log(data.code);
-
-            Result.html('Detect: '+data.code);
+            // console.log(data.code);
+            var obj = JSON.parse(data);
+            var i;
+            Result.html('Detect :)<br>');
+            for(i=0; i<obj.length;i++){
+                Result.append("Code: "+obj[i].code+"<br>Type: "+obj[i].type+"<br>");
+            }
             window.navigator.vibrate(200);
+            clearTimeout(interval);
         }
 
         // Do Any thing you want
@@ -155,6 +161,7 @@ function handleError(error) {
   }
   startbutton.addEventListener('click', function(ev){
       takepicture();
+      Result.html("Searching..");
       ev.preventDefault();
       }, false);
 
