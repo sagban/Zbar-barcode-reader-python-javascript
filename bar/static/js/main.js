@@ -144,10 +144,11 @@ function handleError(error) {
             // console.log(data.code);
             var obj = JSON.parse(data);
             var i;
-            Result.html('Detect :)<br>');
+            Result.html('<b>Detected</b> :)<ol>');
             for(i=0; i<obj.length;i++){
-                Result.append("Code: "+obj[i].code+"<br>Type: "+obj[i].type+"<br>");
+                Result.append("<li><ul><li>Code: <b>"+obj[i].code+"</b></li><li>Type: <b>"+obj[i].type+"</b></li></ul></li>");
             }
+            Result.append("</ol>")
             window.navigator.vibrate(200);
             clearTimeout(interval);
         }
