@@ -8,7 +8,7 @@ packaging==17.1
 pbr==4.0.3
 Pillow==5.0.0
 pytz==2018.3
-PyYAML==3.12
+PyYAML==5.4
 pyzbar==0.1.7
 requests==2.18.4
 urllib3==1.22
