@@ -6,7 +6,7 @@ GitPython==2.1.9
 numpy==1.14.3
 packaging==17.1
 pbr==4.0.3
-Pillow==5.0.0
+Pillow==8.2.0
 pytz==2018.3
 PyYAML==3.12
 pyzbar==0.1.7
