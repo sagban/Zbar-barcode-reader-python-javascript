@@ -1,5 +1,5 @@
 dependency-management==0.4.0
-Django==2.0.3
+Django==2.2.24
 django-sslserver==0.20
 gitdb2==2.0.3
 GitPython==2.1.9
